@@ -31,6 +31,7 @@ main {
 
   p {
     color: $dark-grayish-magenta;
+    font-weight: 500;
   }
 
   .rating {
@@ -88,7 +89,7 @@ main {
       padding-left: 1rem;
 
       .user-name {
-        font-weight: 500;
+        font-weight: 700;
       }
 
       .verified-buyer {
@@ -103,7 +104,9 @@ main {
     }
 
     .message {
+      color: $light-grayish-magenta;
       margin-top: 1rem;
+      font-weight: 500;
       // display: block;
       // width: 100%;
       // clear: left;
