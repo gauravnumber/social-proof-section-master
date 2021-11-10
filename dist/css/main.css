@@ -21,6 +21,37 @@ main {
   padding: 1rem;
   text-align: center;
 }
+@media only screen and (min-width: 1000px) {
+  main {
+    padding: 8rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "heading . rating1" "heading-message . rating2" "heading-message . rating3" "post1 post2 post3";
+  }
+  main .heading {
+    grid-area: heading;
+  }
+  main .heading-message {
+    grid-area: heading-message;
+  }
+  main .rating.one {
+    grid-area: rating1;
+  }
+  main .rating.two {
+    grid-area: rating2;
+  }
+  main .rating.three {
+    grid-area: rating3;
+  }
+  main .post.one {
+    grid-area: post1;
+  }
+  main .post.two {
+    grid-area: post2;
+  }
+  main .post.three {
+    grid-area: post3;
+  }
+}
 main > div {
   padding: 1rem;
 }

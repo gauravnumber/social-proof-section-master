@@ -7,8 +7,54 @@ main {
   gap: 1rem;
 
   padding: 1rem;
-
   text-align: center;
+
+  @include bigScreen {
+    .heading {
+      grid-area: heading;
+    }
+
+    .heading-message {
+      grid-area: heading-message;
+    }
+
+    // .rating:nth-child(1) {
+    .rating.one {
+      grid-area: rating1;
+      // background-color: aqua;
+      // color: #000;
+    }
+
+    .rating.two {
+      grid-area: rating2;
+    }
+
+    .rating.three {
+      grid-area: rating3;
+    }
+
+    .post.one {
+      grid-area: post1;
+    }
+
+    .post.two {
+      grid-area: post2;
+    }
+
+    .post.three {
+      grid-area: post3;
+    }
+
+    padding: 8rem;
+    grid-template-columns: repeat(3, 1fr);
+    // grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-template-areas:
+      "heading . rating1"
+      "heading-message . rating2"
+      "heading-message . rating3"
+      "post1 post2 post3";
+    // background-color: lawngreen;
+  }
 
   & > div {
     padding: 1rem;
