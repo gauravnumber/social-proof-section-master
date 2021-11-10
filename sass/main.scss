@@ -1,6 +1,13 @@
 @import "config";
 @import "media";
 
+// @include bigScreen {
+//   body {
+//     width: 100%;
+//     height: 100vh;
+//   }
+// }
+
 main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
@@ -12,26 +19,67 @@ main {
   @include bigScreen {
     .heading {
       grid-area: heading;
+
+      h1 {
+        font-size: 2rem;
+        text-align-last: left;
+      }
     }
 
     .heading-message {
       grid-area: heading-message;
+
+      // font-size: 1.5em;
     }
 
     // .rating:nth-child(1) {
-    .rating.one {
-      grid-area: rating1;
-      // background-color: aqua;
-      // color: #000;
-    }
+    .rating {
+      margin-top: 2rem;
+      &.one {
+        position: relative;
+        left: -8rem;
 
-    .rating.two {
-      grid-area: rating2;
-    }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: rating1;
+      }
 
-    .rating.three {
-      grid-area: rating3;
+      &.two {
+        position: relative;
+        left: -4rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: rating2;
+      }
+
+      &.three {
+        position: relative;
+        left: 0rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: rating3;
+      }
     }
+    // .rating.one {
+    //   position: relative;
+    //   left: 1rem;
+    //   grid-area: rating1;
+    //   // background-color: aqua;
+    //   // color: #000;
+    // }
+
+    // .rating.two {
+    //   grid-area: rating2;
+    // }
+
+    // .rating.three {
+    //   grid-area: rating3;
+    // }
 
     .post.one {
       grid-area: post1;
@@ -45,14 +93,34 @@ main {
       grid-area: post3;
     }
 
+    .rating-group {
+      grid-area: rating-group;
+      // padding: 1rem;
+    }
+
+    // .rating {
+    //   position: relative;
+    //   margin-top: 2rem;
+
+    //   .one {
+    //     left: 1rem;
+    //   }
+    // }
+
     padding: 8rem;
     grid-template-columns: repeat(3, 1fr);
     // grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     grid-template-areas:
-      "heading . rating1"
-      "heading-message . rating2"
-      "heading-message . rating3"
+      "heading . rating-group"
+      // "heading rating-group rating-group"
+      "heading-message . rating-group"
+      "heading-message . rating-group"
+      ". . ."
+      ". . ."
       "post1 post2 post3";
+
+    // gap: 1rem;
+
     // background-color: lawngreen;
   }
 

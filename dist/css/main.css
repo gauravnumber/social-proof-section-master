@@ -25,21 +25,43 @@ main {
   main {
     padding: 8rem;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "heading . rating1" "heading-message . rating2" "heading-message . rating3" "post1 post2 post3";
+    grid-template-areas: "heading . rating-group" "heading-message . rating-group" "heading-message . rating-group" ". . ." ". . ." "post1 post2 post3";
   }
   main .heading {
     grid-area: heading;
   }
+  main .heading h1 {
+    font-size: 2rem;
+    text-align-last: left;
+  }
   main .heading-message {
     grid-area: heading-message;
   }
+  main .rating {
+    margin-top: 2rem;
+  }
   main .rating.one {
+    position: relative;
+    left: -8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-area: rating1;
   }
   main .rating.two {
+    position: relative;
+    left: -4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-area: rating2;
   }
   main .rating.three {
+    position: relative;
+    left: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-area: rating3;
   }
   main .post.one {
@@ -50,6 +72,9 @@ main {
   }
   main .post.three {
     grid-area: post3;
+  }
+  main .rating-group {
+    grid-area: rating-group;
   }
 }
 main > div {
