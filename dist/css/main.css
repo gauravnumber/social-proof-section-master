@@ -40,31 +40,37 @@ main .rating > .five-star-review {
   font-weight: 700;
 }
 main .post {
+  line-height: 1.5;
   color: #f7f2f7;
   background-color: #502050;
-  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   border-radius: 1rem;
 }
 main .post .profile-pic {
-  position: absolute;
-  left: 2rem;
   border-radius: 50%;
   width: 50px;
 }
-main .post .user {
-  position: absolute;
-  left: 1rem;
+main .post .user-header {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
   text-align: left;
   padding-left: 1rem;
 }
-main .post .user-name {
+main .post .user-header .user-name {
   font-weight: 700;
 }
-main .post .user .verified-buyer {
+main .post .user-header .verified-buyer {
   color: #ee68a4;
 }
+main .post .user-header .name-status {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 main .post .message {
-  margin-top: 4rem;
+  margin-top: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */
