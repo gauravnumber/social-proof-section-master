@@ -59,7 +59,7 @@ main .post .user-header {
   padding-left: 1rem;
 }
 main .post .user-header .user-name {
-  font-weight: 700;
+  font-weight: 500;
 }
 main .post .user-header .verified-buyer {
   color: #ee68a4;
