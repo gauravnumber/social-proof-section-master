@@ -30,5 +30,15 @@ main h1 {
 main p {
   color: #937b92;
 }
+main .rating {
+  padding: 1rem;
+  background-color: #f7f2f7;
+  border-radius: 0.7rem;
+}
+main .rating > .five-star-review {
+  padding: 1rem;
+  color: #502050;
+  font-weight: 700;
+}
 
 /*# sourceMappingURL=main.css.map */

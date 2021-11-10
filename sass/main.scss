@@ -32,4 +32,22 @@ main {
   p {
     color: $dark-grayish-magenta;
   }
+
+  .rating {
+    padding: 1rem;
+    background-color: $light-grayish-magenta;
+
+    border-radius: 0.7rem;
+    // background-color: lighten($dark-grayish-magenta, 10);
+    // background-color: lighten($color: $dark-grayish-magenta, $amount: 10);
+    & > .five-star-review {
+      padding: 1rem;
+
+      color: $very-dark-magenta;
+      font-weight: 700;
+    }
+    // & > img {
+    //   display: inline-block;
+    // }
+  }
 }
