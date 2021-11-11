@@ -82,6 +82,7 @@ main {
     // }
 
     .post.one {
+      // margin-top: 1rem;
       grid-area: post1;
     }
 
@@ -115,14 +116,15 @@ main {
       // "heading rating-group rating-group"
       "heading-message . rating-group"
       "heading-message . rating-group"
-      ". . ."
-      ". . ."
+      // ". . ."
+      // ". . ."
       "post1 post2 post3";
 
     // gap: 1rem;
 
     // background-color: lawngreen;
   }
+  // media query end
 
   & > div {
     padding: 1rem;
@@ -139,10 +141,13 @@ main {
 
   .rating {
     background-color: $light-grayish-magenta;
-
     border-radius: 0.7rem;
+    padding: 1rem;
+    margin-top: 1rem;
+
     & > .five-star-review {
       padding: 1rem;
+      // margin-top: 1rem;
 
       color: $very-dark-magenta;
       font-weight: 700;
