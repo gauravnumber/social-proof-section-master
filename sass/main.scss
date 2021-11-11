@@ -140,6 +140,9 @@ main {
   p {
     color: $dark-grayish-magenta;
     font-weight: 500;
+    @include bigScreen {
+      text-align: left;
+    }
   }
 
   .rating {
