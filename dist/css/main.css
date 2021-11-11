@@ -12,6 +12,14 @@ html {
 body {
   font-family: "Spartan", sans-serif;
   background-color: white;
+  background: url("../../images/bg-pattern-top-desktop.svg") no-repeat;
+}
+@media only screen and (min-width: 1000px) {
+  body {
+    background-image: url("../../images/bg-pattern-top-desktop.svg"), url("../../images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right 8rem;
+  }
 }
 
 main {
@@ -20,6 +28,65 @@ main {
   gap: 1rem;
   padding: 1rem;
   text-align: center;
+}
+@media only screen and (min-width: 1000px) {
+  main {
+    padding: 8rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "heading . rating-group" "heading-message . rating-group" "heading-message . rating-group" "post1 post2 post3";
+  }
+  main .heading {
+    grid-area: heading;
+  }
+  main .heading h1 {
+    font-size: 2rem;
+    text-align-last: left;
+  }
+  main .heading-message {
+    grid-area: heading-message;
+  }
+  main .rating {
+    margin-top: 2rem;
+  }
+  main .rating.one {
+    position: relative;
+    left: -8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: rating1;
+  }
+  main .rating.two {
+    position: relative;
+    left: -4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: rating2;
+  }
+  main .rating.three {
+    position: relative;
+    left: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: rating3;
+  }
+  main .post.one {
+    grid-area: post1;
+    align-self: start;
+  }
+  main .post.two {
+    grid-area: post2;
+    align-self: center;
+  }
+  main .post.three {
+    grid-area: post3;
+    margin-top: 6rem;
+  }
+  main .rating-group {
+    grid-area: rating-group;
+  }
 }
 main > div {
   padding: 1rem;
@@ -34,6 +101,8 @@ main p {
 main .rating {
   background-color: #f7f2f7;
   border-radius: 0.7rem;
+  padding: 1rem;
+  margin-top: 1rem;
 }
 main .rating > .five-star-review {
   padding: 1rem;
