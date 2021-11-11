@@ -40,7 +40,7 @@ main {
   }
   main .heading h1 {
     font-size: 2rem;
-    text-align-last: left;
+    text-align: left;
   }
   main .heading-message {
     grid-area: heading-message;
