@@ -1,4 +1,5 @@
 @import "variables";
+@import "media";
 
 * {
   margin: 0;
@@ -14,4 +15,13 @@ html {
 body {
   font-family: "Spartan", sans-serif;
   background-color: $white;
+
+  @include bigScreen {
+    background-image: url("../../images/bg-pattern-top-desktop.svg"),
+      url("../../images/bg-pattern-bottom-desktop.svg");
+
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right 8rem;
+    // background-position: unset, right -1rem;
+  }
 }
