@@ -66,12 +66,15 @@ main {
   }
   main .post.one {
     grid-area: post1;
+    align-self: start;
   }
   main .post.two {
     grid-area: post2;
+    align-self: center;
   }
   main .post.three {
     grid-area: post3;
+    margin-top: 6rem;
   }
   main .rating-group {
     grid-area: rating-group;

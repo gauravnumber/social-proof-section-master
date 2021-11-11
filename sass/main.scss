@@ -84,14 +84,17 @@ main {
     .post.one {
       // margin-top: 1rem;
       grid-area: post1;
+      align-self: start;
     }
 
     .post.two {
       grid-area: post2;
+      align-self: center;
     }
 
     .post.three {
       grid-area: post3;
+      margin-top: 6rem;
     }
 
     .rating-group {
